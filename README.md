@@ -1,3 +1,5 @@
+This was a solo weekend assignment at Prime Digital Academy. Below are the instructions provided.
+
 ![MEAN Diagram](images/mean-diagram-3.png)
 ### Let's spin up a new project!
 
@@ -108,14 +110,14 @@ Here is how the index.js file should look:
 
 	var express = require('express');
 	var router = express.Router();
-	
+
 	router.get('/', function(req, res) {
 		console.log('Here is a console log');
 		res.send('Hello!');
 	});
-	
+
 	module.exports = router;
-	
+
 Once again, we are bringing in Express. Then we are also bringing in 'Router', which is set to a variable from a return of the router method of the express object. Routers will help us manage how incoming requests are handled. More on this later. But now, instead of calling the 'get' method on 'app', we are calling it on the 'router'. So we set up the get method on the router object with a few more intricacies.
 
 As a final command, we export the router object. This makes it available to us throughout the rest of the application. Basically, we have set this up to be how we handle routes for the entire application.
@@ -126,12 +128,12 @@ We need to make some additional changes in our server.js file now. The first is 
 		var express = require('express');
 		var app = express();
 		var index = require('../routes/index');
-		
+
 		app.use('/', index);
-		
+
 		var server = app.listen(3000, function() {
 			var port = server.address().port;
-			console.log('Listening on port', port);	
+			console.log('Listening on port', port);
 		});
 
 
@@ -153,7 +155,7 @@ This will turn on mongod, which we will use later. To stop mongo, press "control
 Let's install mongoose with this command:
 
 	npm install mongoose --save
-	
+
 Great! With mongoose installed, we can now easily communicate with our Mongo database! Over in our index.js file, let's add a few lines of code after we declare our router variable:
 ```
 var mongoose = require('mongoose');
