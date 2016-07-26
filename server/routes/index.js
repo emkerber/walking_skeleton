@@ -13,7 +13,8 @@ router.post('/add', function(request, response, next){
     if (err) {
       console.log('meow %s', err);
     }
-    response.send(kitty.toJSON());
+    //response.send(kitty.toJSON()); "YUCK" -Joel
+    response.send(kitty);
     next();
   });
 });
