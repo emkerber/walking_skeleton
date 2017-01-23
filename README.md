@@ -3,6 +3,8 @@ This was a solo weekend assignment at Prime Digital Academy. Below are the instr
 ![MEAN Diagram](images/mean-diagram-3.png)
 ### Let's spin up a new project!
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/emkerber/walking_skeleton.svg)](https://greenkeeper.io/)
+
 ### Create a new Atom Project
 First, we are going to create a new project in Atom.
 
